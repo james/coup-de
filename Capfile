@@ -1,30 +1,35 @@
+# A very simple capistrano deploy recipe for staticmatic and git
+
+set :user, 'root'
 role :web, "abscond.org"
-set :location, "/var/www/coupde/current"
-set :git, "git@github.com:james/coup-de.git"
+ssh_options[:port] = 2222
+
+set :location, "/var/www/coupde"
+set :git, "git://github.com/james/coup-de.git"
 
 task :setup do
-  run "cd #{location}; git clone #{git}"
+  run "mkdir -p #{location}; cd #{location}; git clone #{git} current"
 end
 
 task :reset_code do
-  run "cd #{location}; git reset --hard HEAD^;"
+  run "cd #{location}/current; git reset --hard"
 end
 
 task :update_code do
-  run "cd #{location}; git pull"
+  run "cd #{location}/current; git pull"
 end
 
 task :build do
-  run "cd #{location}; staticmatic build ."
+  run "cd #{location}/current; staticmatic build ."
 end
 
-task :restart do
-  run "sudo /etc/init.d/nginx reload"
-end
-
-task :deploy do
+task :deploy_remote do
   reset_code
   update_code
   build
-  restart
+end
+
+task :deploy do
+  `git push`
+  deploy_remote
 end
