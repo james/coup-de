@@ -1,3 +1,22 @@
 body {
-  font-family: Verdana;
-  font-size: 10pt; }
+  font-family: "Gill Sans","Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; }
+  body a {
+    color: inherit; }
+  body a:hover {
+    color: #F4191F; }
+  body #welcome p {
+    font-weight: 100;
+    font-family: "GillSans-Light","Gill Sans Light","Gill Sans","Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2; }
+  body #welcome p.hello {
+    line-height: 0.8; }
+  body #welcome p.grey {
+    color: #ccc; }
+  body #welcome h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 3.3em;
+    color: #F4191F; }
