@@ -39,7 +39,7 @@ Flickr = $.klass({
     var element = jQuery('<ul class="flickr_photos" id="flickr_photos_from_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id="+user_id+"&format=json&jsoncallback=?", function(data){ 
-      $.each(data.items, function(i, item) { 
+      $.each(data.items.slice(0,9), function(i, item) { 
         element.append(
           '<li>'+
             '<a href="'+item.link+'">'+
