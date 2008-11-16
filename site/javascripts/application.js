@@ -12,7 +12,7 @@ Twitter = $.klass({
 
 GitHub = $.klass({
   initialize: function(user_id) {
-    var element = jQuery('<ul class="github_repositories" id="github_repositories_for_'+user_id+'"></ul>');
+    var element = jQuery('<ul class="github_repositories" id="github_repositories_from_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://github.com/api/v1/json/"+user_id+"?callback=?", function(data){ 
       $.each(data.user.repositories, function(i, item) { 
@@ -36,7 +36,7 @@ LastFmEvents = $.klass({
 
 Flickr = $.klass({
   initialize: function(user_id) {
-    var element = jQuery('<ul class="flickr_photos" id="flickr_photos_for_'+user_id+'"></ul>');
+    var element = jQuery('<ul class="flickr_photos" id="flickr_photos_from_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id="+user_id+"&format=json&jsoncallback=?", function(data){ 
       $.each(data.items, function(i, item) { 
@@ -52,9 +52,28 @@ Flickr = $.klass({
   }
 });
 
+Delicious = $.klass({
+  initialize: function(user_id) {
+    var element = jQuery('<ul class="delicious_bookmarks" id="delicious_bookmarks_from_'+user_id+'"></ul>');
+    this.element.replaceWith(element);
+    $.getJSON("http://feeds.delicious.com/v2/json/"+user_id+"?count=15&callback=?", function(data){ 
+      $.each(data, function(i, item) { 
+        element.append(
+          '<li>'+
+            '<a href="'+item.u+'">'+
+              item.d+
+            '</a>'+
+          '</li>'
+        );
+      });
+    });
+  }
+});
+
 jQuery(function($) {
   $('a.twitter').attach(Twitter, 'coupde');
   $('a.github').attach(GitHub, 'james');
   $('a.gigs').attach(LastFmEvents, 'Abscond', 'ef5f6b42e168116f913ed26eeacb7e34');
   $('a.photos').attach(Flickr, '82586441@N00');
+  $('a.links').attach(Delicious, 'coupde');
 });
