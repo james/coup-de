@@ -1,6 +1,6 @@
 Twitter = $.klass({
   initialize: function(user_id) {
-    var element = jQuery('<ul></ul>');
+    var element = jQuery('<ul class="tweets" id="tweets_from_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://twitter.com/status/user_timeline/"+user_id+".json?count=3."+Math.random()+"&callback=?", function(data){ 
       $.each(data, function(i, item) { 
@@ -12,7 +12,7 @@ Twitter = $.klass({
 
 GitHub = $.klass({
   initialize: function(user_id) {
-    var element = jQuery('<ul></ul>');
+    var element = jQuery('<ul class="github_repositories" id="github_repositories_for_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://github.com/api/v1/json/"+user_id+"?callback=?", function(data){ 
       $.each(data.user.repositories, function(i, item) { 
@@ -24,7 +24,7 @@ GitHub = $.klass({
 
 LastFmEvents = $.klass({
   initialize: function(user_id, api_key) {
-    var element = jQuery('<ul></ul>');
+    var element = jQuery('<ul class="lastfm_events" id="lastfm_events_for_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://lastfm-api-ext.appspot.com/2.0/?method=user.getevents&user="+user_id+"&api_key="+api_key+"&outtype=js&callback=?", function(data){ 
       $.each(data.events, function(i, item) { 
@@ -36,7 +36,7 @@ LastFmEvents = $.klass({
 
 Flickr = $.klass({
   initialize: function(user_id) {
-    var element = jQuery('<ul></ul>');
+    var element = jQuery('<ul class="flickr_photos" id="flickr_photos_for_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id="+user_id+"&format=json&jsoncallback=?", function(data){ 
       $.each(data.items, function(i, item) { 
