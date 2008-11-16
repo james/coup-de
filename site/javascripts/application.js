@@ -16,7 +16,13 @@ GitHub = $.klass({
     this.element.replaceWith(element);
     $.getJSON("http://github.com/api/v1/json/"+user_id+"?callback=?", function(data){ 
       $.each(data.user.repositories, function(i, item) { 
-        element.append("<li>"+item.name+"</li>");
+        element.append(
+          '<li>'+
+             '<a href="'+item.url+'">'+
+               item.name+
+             '</a>'+
+           '</li>'
+        );
       });
     });
   }
@@ -28,7 +34,13 @@ LastFmEvents = $.klass({
     this.element.replaceWith(element);
     $.getJSON("http://lastfm-api-ext.appspot.com/2.0/?method=user.getevents&user="+user_id+"&api_key="+api_key+"&outtype=js&callback=?", function(data){ 
       $.each(data.events, function(i, item) { 
-        element.append("<li>"+item.title+"</li>");
+        element.append(
+          '<li>'+
+            '<a href="'+item.url+'">'+
+              item.title+
+            '</a>'+
+          '</li>'
+        );
       });
     });
   }
