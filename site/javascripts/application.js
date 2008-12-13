@@ -2,7 +2,7 @@ Twitter = $.klass({
   initialize: function(user_id) {
     var element = jQuery('<ul class="tweets" id="tweets_from_'+user_id+'"></ul>');
     this.element.replaceWith(element);
-    $.getJSON("http://twitter.com/status/user_timeline/"+user_id+".json?count=3."+Math.random()+"&callback=?", function(data){ 
+    $.getJSON("http://twitter.com/status/user_timeline/"+user_id+".json?count=3&callback=?", function(data){ 
       $.each(data, function(i, item) { 
         element.append("<li>"+item.text+"</li>");
       });
