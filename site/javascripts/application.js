@@ -102,6 +102,26 @@ Tumblr = $.klass({
   }
 });
 
+PeoplesMusicStore = $.klass({
+  initialize: function(user_id) {
+    var element = jQuery('<ul class="delicious_bookmarks" id="delicious_bookmarks_from_'+user_id+'"></ul>');
+    this.element.replaceWith(element);
+    $.getJSON("http://peoplesmusicstore.com/"+user_id+".json?callback=?", function(data){ 
+      $.each(data.collections, function(i, collection) { 
+        $.each(collection.collection_items, function(i, item) { 
+          element.append(
+            '<li>'+
+              '<a href="'+item.url+'">'+
+                item.artist + ": " + item.title +
+              '</a>'+
+            '</li>'
+          );
+        });
+      });
+    });
+  }
+});
+
 
 jQuery(function($) {
   $('a.twitter').attach(Twitter, 'coupde');
@@ -110,4 +130,5 @@ jQuery(function($) {
   $('a.photos').attach(Flickr, '82586441@N00');
   $('a.links').attach(Delicious, 'coupde');
   $('a.tumble').attach(Tumblr, 'tumble.coupde.com')
+  $('a.tunes').attach(PeoplesMusicStore, 'coupde')
 });
