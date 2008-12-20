@@ -87,7 +87,7 @@ Tumblr = $.klass({
     var element = jQuery('<ul class="delicious_bookmarks" id="delicious_bookmarks_from_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://"+user_id+"/api/read/json?callback=?", function(data){ 
-      $.each(data.posts, function(i, item) { 
+      $.each(data.posts.slice(0,3), function(i, item) { 
         if(item["regular-title"]) {
            element.append(
              '<li>'+
