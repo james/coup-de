@@ -51,7 +51,7 @@ Flickr = $.klass({
     var element = jQuery('<ul class="flickr_photos" id="flickr_photos_from_'+user_id+'"></ul>');
     this.element.replaceWith(element);
     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id="+user_id+"&format=json&jsoncallback=?", function(data){ 
-      $.each(data.items.slice(0,15), function(i, item) { 
+      $.each(data.items.slice(0,18), function(i, item) { 
         element.append(
           '<li>'+
             '<a href="'+item.link+'">'+
@@ -129,6 +129,8 @@ jQuery(function($) {
   $('a.gigs').attach(LastFmEvents, 'Abscond', 'ef5f6b42e168116f913ed26eeacb7e34');
   $('a.photos').attach(Flickr, '82586441@N00');
   $('a.links').attach(Delicious, 'coupde');
-  $('a.tumble').attach(Tumblr, 'tumble.coupde.com')
-  $('a.tunes').attach(PeoplesMusicStore, 'coupde')
+  $('a.tumble').attach(Tumblr, 'tumble.coupde.com');
+  $('a.tunes').attach(PeoplesMusicStore, 'coupde');
+  
+  $('body').addClass('javascripted');
 });

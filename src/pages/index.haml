@@ -13,34 +13,62 @@
 %hr.space
 
 .span-6
-  %h2 Tumblog
-  %a.tumble{:href => "http://tumble.coupde.com"} My Tumblog
-  
-  %h2 Twitter
-  %a.twitter{:href => "http://twitter.com/coupde"} My Twitter page
-  
-  %h2 Links
-  %a.links{:href => "http://delicious.com/coupde"} My delicious bookmarks
+  %ul.menu
+    %li
+      %a.current{:href => "#about"} About
+    %li
+      %a{:href => "#writings"} Writings
+    %li
+      %a{:href => "#music"} Music
+    %li 
+      %a{:href => "#code"} Code
+    %li 
+      %a{:href => "#photos"} Photos
+    %li 
+      %a{:href => "#good_things"} Good things
+    %li 
+      %a{:href => "#last_orders"} Last Orders
+    %li
+      %a{:href => "#rewired_state"} Rewired State
+    %li
+      %a{:href => "#cv"} CV
+    %li
+      %a{:href => "#bucket_of_shite"} Bucket of Shite
+    %li
+      %a{:href => "#relme"} rel=me
 
-.span-6
+
+.content.span-12
+
+  %h2#about About
+  
+  %p Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi.
+  %p Coup De is the personal site of me, James Darling. Hi.Coup De is the personal site of me, James Darling. Hi.
+  
+  %h2#writing Writings
+  %a.tumble{:href => "http://tumble.coupde.com"} My Tumblog
+
+  %a.twitter{:href => "http://twitter.com/coupde"} My Twitter page
+
+  %h2 Music
+  %a.gigs{:href => "http://last.fm/users/Abscond"} My last.fm events
+  %a.tunes{:href => "http://peoplesmusicstore.com/coupde"} My Music Store
+  / My Soundcloud
+
+  %h2 Code
+  %a.github{:href => "http://github.com/james"} My GitHub Page
+  / My github commits
+  / Things I use
+
   %h2 Photos
   %a.photos{:href => "http://flickr.com/photos/abscond"} My flickr photos
 
-.span-6
-  %h2 Tunes
-  %a.tunes{:href => "http://peoplesmusicstore.com/coupde"} My Music Store
-  
-  %h2 Gigs
-  %a.gigs{:href => "http://last.fm/users/Abscond"} My last.fm events
- 
-.span-6.last
-  %h2 Code
-  %a.github{:href => "http://github.com/james"} My GitHub Page
-  
-  %h2 Badges
+  %h2 Good Things
+  %a.links{:href => "http://delicious.com/coupde"} My delicious bookmarks  
   %a{:href => "http://www.openrightsgroup.org/"}
     %img{:src => "http://widgets.openrightsgroup.org/founding1000/since/956149.png", :alt => "Protecting your bits since 04/10/07. Open Rights Group founder #492"}
 
+.span-6.last
   
 %hr.space
 
