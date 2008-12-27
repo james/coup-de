@@ -15,7 +15,7 @@
 .span-6
   %ul.menu
     %li
-      %a.current{:href => "#about"} About
+      %a{:href => "#about"} About
     %li
       %a{:href => "#writings"} Writings
     %li
@@ -39,38 +39,45 @@
 
 
 .content.span-12
-
-  %h2#about About
   
-  %p Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi.
-  %p Coup De is the personal site of me, James Darling. Hi.Coup De is the personal site of me, James Darling. Hi.
+  #about.section
+    %h2 About
+    
+    %p Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi. Coup De is the personal site of me, James Darling. Hi.
+    %p Coup De is the personal site of me, James Darling. Hi.Coup De is the personal site of me, James Darling. Hi.
   
-  %h2#writing Writings
-  %a.tumble{:href => "http://tumble.coupde.com"} My Tumblog
+  #writings.section
+    %h2 Writings
+    %a.tumble{:href => "http://tumble.coupde.com"} My Tumblog
+    
+    %a.twitter{:href => "http://twitter.com/coupde"} My Twitter page
+  
+  #music.section
+    %h2 Music
+    %a.gigs{:href => "http://last.fm/users/Abscond"} My last.fm events
+    %a.tunes{:href => "http://peoplesmusicstore.com/coupde"} My Music Store
+    / My Soundcloud
 
-  %a.twitter{:href => "http://twitter.com/coupde"} My Twitter page
+  #code.section
+    %h2 Code
+    %a.github{:href => "http://github.com/james"} My GitHub Page
+    / My github commits
+    / Things I use
 
-  %h2 Music
-  %a.gigs{:href => "http://last.fm/users/Abscond"} My last.fm events
-  %a.tunes{:href => "http://peoplesmusicstore.com/coupde"} My Music Store
-  / My Soundcloud
+  #photos.section
+    %h2 Photos
+    %a.photos{:href => "http://flickr.com/photos/abscond"} My flickr photos
 
-  %h2 Code
-  %a.github{:href => "http://github.com/james"} My GitHub Page
-  / My github commits
-  / Things I use
-
-  %h2 Photos
-  %a.photos{:href => "http://flickr.com/photos/abscond"} My flickr photos
-
-  %h2 Good Things
-  %a.links{:href => "http://delicious.com/coupde"} My delicious bookmarks  
-  %a{:href => "http://www.openrightsgroup.org/"}
-    %img{:src => "http://widgets.openrightsgroup.org/founding1000/since/956149.png", :alt => "Protecting your bits since 04/10/07. Open Rights Group founder #492"}
+  #good_things.section
+    %h2 Good Things
+    %a.links{:href => "http://delicious.com/coupde"} My delicious bookmarks  
+    %a{:href => "http://www.openrightsgroup.org/"}
+      %img{:src => "http://widgets.openrightsgroup.org/founding1000/since/956149.png", :alt => "Protecting your bits since 04/10/07. Open Rights Group founder #492"}
 
 .span-6.last
   
 %hr.space
 
-#footer
-  %h2.alt You can email me: James @ here, this domain, coupde.com
+/
+  #footer
+    %h2.alt You can email me: James @ here, this domain, coupde.com
