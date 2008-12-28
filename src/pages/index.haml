@@ -46,45 +46,74 @@
     .span-12
       %p Coupde.com is a collage of the online life of James Darling. It's got the latest stuff I've been up to, along with basic info. Have a browse around.
                 
-      %h4 James Darling
+      %h3 James Darling
       %p Hi. I'm James, and I happen to make things on the internet for fun and profit.
       %p I'm currently living in London, working as a freelance web developer and consultant type person.
       %p I have a load of interests, from raving to Government digital strategy. Have a look at some of the things I can do.
     
     .span-5.last
       %img{:src => "/images/me.jpg"}
-
-    
-    / .span-6.last
-    /   %h4 How this site works
-    /   
-    /   %p Coupde.com works using only client side code.
   
   #writings.section
     %h2 Writings
-    %a.tumble{:href => "http://tumble.coupde.com"} My Tumblog
     
-    %a.twitter{:href => "http://twitter.com/coupde"} My Twitter page
+    %h3 Tumblog
+    %p I have a tumblog at tumblr where I'm trying to write weekly articles.
+    %a.tumble{:href => "http://tumble.coupde.com"} Visit my Tumblog.
+    
+    %h3 Twitter
+    %p I have been using Twitter madly since 2006.
+    %a.twitter{:href => "http://twitter.com/coupde"} Visit my Twitter page.
   
   #music.section
     %h2 Music
+    %h3 Gigs
+    %h5 Future
+    %p These are the gigs I will be attending soon, from my last.fm account.
     %a.gigs{:href => "http://last.fm/users/Abscond"} My last.fm events
+    
+    / oo5
+    
+    %h3 Favourite tunes
+    %p I have an MP3 store at People's Music Store, where I recommend the music that gets me through life. 
     %a.tunes{:href => "http://peoplesmusicstore.com/coupde"} My Music Store
     / My Soundcloud
 
   #code.section
-    %h2 Code
-    %a.github{:href => "http://github.com/james"} My GitHub Page
-    / My github commits
-    / Things I use
+    
+    .span-11
+      %h2 Code
+      %h3 Git Repositories
+      %p I love git. I commit all my open source code to my github account.
+      %a.github{:href => "http://github.com/james"} My GitHub Page
+      / My github commits
+    
+    .span-6.last.sub
+      %h3 How I made this site.
+      %p Coupde.com is a bit fun as it uses no server side code. It uses only Unobtrusive JavaScript, using JSONP to pull in external data.
+      / You can read about it here. And view the code here.
+      %p Here are the other tools I used.
+      %ul
+        %li Staticmatic for HAML and SASS
+        %li JQuery
+        %li Lowpro for JQuery
+        %li Git and github
+        %li Textmate
+        %li Capistrano
+      / Things I use
 
   #photos.section
     %h2 Photos
+    %p I occasionally upload photos of my life to flickr.
     %a.photos{:href => "http://flickr.com/photos/abscond"} My flickr photos
 
   #good_things.section
     %h2 Good Things
-    %a.links{:href => "http://delicious.com/coupde"} My delicious bookmarks  
+    %h3 Links
+    %p I collect the webpages that I think should be shared at my Delicious account.
+    %a.links{:href => "http://delicious.com/coupde"} See my delicious bookmarks 
+    %h3 Badges
+    %p These are some things I think make the world better.
     %a{:href => "http://www.openrightsgroup.org/"}
       %img{:src => "http://widgets.openrightsgroup.org/founding1000/since/956149.png", :alt => "Protecting your bits since 04/10/07. Open Rights Group founder #492"}
   

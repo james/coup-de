@@ -1,3 +1,9 @@
+/* 
+   MODIFIED FOR COUPDE.COM 
+   * Made spans have a full column right padding by default, adding "tight" class
+   * Shift down header sizes from h3
+*/
+
 /* -----------------------------------------------------------------------
 
    Blueprint CSS Framework 0.7.1
@@ -25,10 +31,10 @@ body {font-size:75%;color:#222;background:#fff;font-family:"Helvetica Neue", Hel
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}
-h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
-h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;height:1.25em;}
-h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
-h6 {font-size:1em;font-weight:bold;}
+/*h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}*/
+h3 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;height:1.25em;}
+h4 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h5 {font-size:1em;font-weight:bold;}
 h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
 p {margin:0 0 1.5em;}
 p img {float:left;margin:1.5em 1.5em 1.5em 0;padding:0;}
