@@ -12,13 +12,15 @@ Nav = $.klass({
   
   onclick: $.delegate({
     'a': function(link) {
-      this.setCurrent(link);
-      if(this.last.position().top > link.position().top) {
-        this.sectionForLink(this.last).hide("slide", { direction: "right" }, 500);
-        this.sectionForLink(link).show("slide", { direction: "left" }, 500);
-      } else {
-        this.sectionForLink(this.last).hide("slide", { direction: "left" }, 500);
-        this.sectionForLink(link).show("slide", { direction: "right" }, 500);
+      if(!link.hasClass("current")) {
+        this.setCurrent(link);
+        if(this.last.position().top > link.position().top) {
+          this.sectionForLink(this.last).hide("slide", { direction: "right" }, 500);
+          this.sectionForLink(link).show("slide", { direction: "left" }, 500);
+        } else {
+          this.sectionForLink(this.last).hide("slide", { direction: "left" }, 500);
+          this.sectionForLink(link).show("slide", { direction: "right" }, 500);
+        }
       }
       return false;
     }
