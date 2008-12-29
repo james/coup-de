@@ -34,13 +34,13 @@ task :deploy do
   deploy_remote
 end
 
-task :build do
+task :build_local do
   `staticmatic build .`
 end
 
 
 task :deploy_gh do
-  build
+  build_local
   `git checkout gh-pages`
   `git rebase master`
   `git checkout master`
