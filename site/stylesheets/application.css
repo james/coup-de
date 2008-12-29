@@ -1,27 +1,71 @@
+body.javascripted .content h2 {
+  display: none; }
+body.javascripted .section {
+  position: absolute;
+  width: 710px;
+  padding-bottom: 1em; }
+
 body {
-  font-family: "Gill Sans","Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; }
+  font-family: "Gill Sans","Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+  font-size: 100%; }
+  body .sub * {
+    color: #666; }
   body a {
     color: inherit; }
   body a:hover {
     color: #F4191F; }
-  body #welcome p {
-    font-weight: 100;
-    font-family: "GillSans-Light","Gill Sans Light","Gill Sans","Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
-    font-size: 2em;
+  body input {
+    font-family: "Gill Sans","Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; }
+  body .alt {
+    color: #666;
+    font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+    font-style: italic;
+    font-weight: normal; }
+  body #welcome {
+    border-bottom: 1px #F4191F solid;
+    padding-bottom: 1em; }
+    body #welcome p {
+      font-weight: 100;
+      font-family: "GillSans-Light","Gill Sans Light","Gill Sans","Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+      font-size: 1.5em;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2; }
+      body #welcome p img {
+        margin: 0 0 1.5em 0; }
+    body #welcome p.hello {
+      line-height: 0.8; }
+    body #welcome p.grey {
+      color: #ccc; }
+    body #welcome h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 2.3em;
+      color: #F4191F; }
+      body #welcome h1 input {
+        border: none;
+        height: 1.2em;
+        font-size: 1em;
+        color: inherit; }
+  body .menu {
+    font-size: 66%;
+    margin-top: -0.2em;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: right;
+    list-style: none; }
+    body .menu .current {
+      font-size: 200%; }
+  body .section {
+    clear: both; }
+  body ul.flickr_photos {
+    list-style: none;
     margin: 0;
-    padding: 0;
-    line-height: 1.2; }
-  body #welcome p.hello {
-    line-height: 0.8; }
-  body #welcome p.grey {
-    color: #ccc; }
-  body #welcome h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 3.3em;
-    color: #F4191F; }
-    body #welcome h1 input {
-      border: none;
-      height: 1.2em;
-      font-size: 1em;
-      color: inherit; }
+    padding: 0; }
+    body ul.flickr_photos li {
+      display: inline;
+      padding: 3px; }
+      body ul.flickr_photos li img {
+        height: 70px; }
+  body #footer {
+    text-align: center; }

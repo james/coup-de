@@ -33,3 +33,16 @@ task :deploy do
   `git push`
   deploy_remote
 end
+
+task :build do
+  `staticmatic build .`
+end
+
+
+task :deploy_gh do
+  build
+  `git checkout gh-pages`
+  `git rebase master`
+  `git checkout master`
+  `git push origin gh-pages`
+end

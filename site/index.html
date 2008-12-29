@@ -3,26 +3,156 @@
   <head>
     <title>Coupde.com | James Darling</title>
     <link href='/stylesheets/blueprint/screen.css' media='screen, projection' rel='stylesheet' type='text/css' />
-    <link href='/stylesheets/blueprint/print.css' media='print' rel='stylesheet' type='text/css' />
+    <!-- %link{:rel => "stylesheet", :href => "/stylesheets/blueprint/print.css",  :type => "text/css", :media => "print"} -->
     <!--[if IE]>
     <link rel="stylesheet" href="/stylesheets/blueprint/ie.css" type="text/css" media="screen, projection">
     <![endif]-->
     <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css"/>
+    <script language="javascript" src="javascripts/jquery.js" type="text/javascript"></script><script language="javascript" src="javascripts/lowpro.jquery.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.history_remote.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery-ui-effects-1.6rc2.js" type="text/javascript"></script><script language="javascript" src="javascripts/services.js" type="text/javascript"></script><script language="javascript" src="javascripts/application.js" type="text/javascript"></script>
     <link href='http://www.myopenid.com/server' rel='openid.server' />
     <link href='http://coupde.myopenid.com/' rel='openid.delegate' />
   </head>
   <body>
     <div class='container'>
-      <div id='welcome'>
+      <div class='span-6 tight'>
+        <p>
+          <img src='/images/header.gif' />
+        </p>
+      </div>
+      <div class='span-18 last' id='welcome'>
         <p class='hello'>Hello,</p>
         <h1>
           This is Coup De
           <input type='text' />
         </h1>
         <p class='grey'>(the artist formerly known as <a href="http://abscond.org">abscond</a>)</p>
-        <p>Somewhere in between a teenager's personal diary and a corporate networking event.</p>
-        <p>Loosley focused around the life of <a href="#">James Darling</a>.</p>
+        <p>it's somewhere in between a teenager's personal diary and a corporate networking event</p>
+        <p>and loosley focused around the life of <a href="#">James Darling</a>.</p>
       </div>
+      <hr class='space' />
+      <div class='span-5'>
+        <ul class='menu'>
+          <li>
+            <a href='#about'>About</a>
+          </li>
+          <li>
+            <a href='#writings'>Writings</a>
+          </li>
+          <li>
+            <a href='#music'>Music</a>
+          </li>
+          <li>
+            <a href='#code'>Code</a>
+          </li>
+          <li>
+            <a href='#photos'>Photos</a>
+          </li>
+          <li>
+            <a href='#good_things'>Good things</a>
+          </li>
+          <!-- %li -->
+          <!-- %a{:href => "#last_orders"} Last Orders -->
+          <!-- %li -->
+          <!-- %a{:href => "#rewired_state"} Rewired State -->
+          <!-- %li -->
+          <!-- %a{:href => "#cv"} CV -->
+          <!-- %li -->
+          <!-- %a{:href => "#bucket_of_shite"} Bucket of Shite -->
+          <!-- %li -->
+          <!-- %a{:href => "#relme"} rel=me -->
+        </ul>
+      </div>
+      <div class='content span-18 last'>
+        <div class='section' id='about'>
+          <h2>About</h2>
+          <div class='span-12'>
+            <p>Coupde.com is a collage of the online life of James Darling. It's got the latest stuff I've been up to, along with basic info. Have a browse around.</p>
+            <h3>James Darling</h3>
+            <p>Hi. I'm James, and I happen to make things on the internet for fun and profit.</p>
+            <p>I'm currently living in London, working as a freelance web developer and consultant type person.</p>
+            <p>I have a load of interests, from raving to Government digital strategy. Have a look at some of the things I can do.</p>
+          </div>
+          <div class='span-5 last'>
+            <img src='/images/me.jpg' />
+          </div>
+        </div>
+        <div class='section' id='writings'>
+          <h2>Writings</h2>
+          <h3>Tumblog</h3>
+          <p>I have a tumblog at tumblr where I'm trying to write weekly articles.</p>
+          <a class='tumble' href='http://tumble.coupde.com'>Visit my Tumblog.</a>
+          <h3>Twitter</h3>
+          <p>I have been using Twitter madly since 2006.</p>
+          <a class='twitter' href='http://twitter.com/coupde'>Visit my Twitter page.</a>
+        </div>
+        <div class='section' id='music'>
+          <h2>Music</h2>
+          <h3>Gigs</h3>
+          <h5>Future</h5>
+          <p>These are the gigs I will be attending soon, from my last.fm account.</p>
+          <a class='gigs' href='http://last.fm/users/Abscond'>My last.fm events</a>
+          <!-- oo5 -->
+          <h3>Favourite tunes</h3>
+          <p>I have an MP3 store at People's Music Store, where I recommend the music that gets me through life.</p>
+          <a class='tunes' href='http://peoplesmusicstore.com/coupde'>My Music Store</a>
+          <!-- My Soundcloud -->
+        </div>
+        <div class='section' id='code'>
+          <div class='span-11'>
+            <h2>Code</h2>
+            <h3>Git Repositories</h3>
+            <p>I love git. I commit all my open source code to my github account.</p>
+            <a class='github' href='http://github.com/james'>My GitHub Page</a>
+            <!-- My github commits -->
+          </div>
+          <div class='span-6 last sub'>
+            <h3>How I made this site.</h3>
+            <p>Coupde.com is a bit fun as it uses no server side code. It uses only Unobtrusive JavaScript, using JSONP to pull in external data.</p>
+            <!-- You can read about it here. And view the code here. -->
+            <p>Here are the other tools I used.</p>
+            <ul>
+              <li>Staticmatic for HAML and SASS</li>
+              <li>JQuery</li>
+              <li>Lowpro for JQuery</li>
+              <li>Git and github</li>
+              <li>Textmate</li>
+              <li>Capistrano</li>
+            </ul>
+            <!-- Things I use -->
+          </div>
+        </div>
+        <div class='section' id='photos'>
+          <h2>Photos</h2>
+          <p>I occasionally upload photos of my life to flickr.</p>
+          <a class='photos' href='http://flickr.com/photos/abscond'>My flickr photos</a>
+        </div>
+        <div class='section' id='good_things'>
+          <h2>Good Things</h2>
+          <h3>Links</h3>
+          <p>I collect the webpages that I think should be shared at my Delicious account.</p>
+          <a class='links' href='http://delicious.com/coupde'>See my delicious bookmarks</a>
+          <h3>Badges</h3>
+          <p>These are some things I think make the world better.</p>
+          <a href='http://www.openrightsgroup.org/'>
+            <img alt='Protecting your bits since 04/10/07. Open Rights Group founder #492' src='http://widgets.openrightsgroup.org/founding1000/since/956149.png' />
+          </a>
+        </div>
+      </div>
+      <hr class='space' />
+      <!-- 
+        <div id='footer'>
+          <h2 class='alt'>You can email me: James @ here, this domain, coupde.com</h2>
+        </div>
+      -->
     </div>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-335745-9");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
   </body>
 </html>
