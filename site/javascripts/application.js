@@ -4,13 +4,18 @@ UnobtrusiveAnchorNav = $.klass({
   initialize: function() {
     // Set the current location is set in the URL hash
     if (location.hash) {
-      this.setCurrent($("a[href="+location.hash+"]"))
+      this.setCurrent($("a[href="+location.hash+"]"));
+      // Scroll to top to prevent hash link from working. Is this bad?
+      $(window).scrollTop(0);
     } else {
       this.setCurrent(this.element.find('a:first'));
     }
     
     // Hide all non-current sections
     $('.section[id!='+this.currentSection()+']').hide();
+    
+    // Makes all sections the same height to stop window size changing
+    $('.section').height($('.section').height())
   },
   
   onclick: $.delegate({
