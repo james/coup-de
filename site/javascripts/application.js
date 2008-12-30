@@ -1,3 +1,4 @@
+console.info();
 // Makes a selection of anchor links to section work as an accordian inspired
 // slidey thing that works with bookmarkable URLs
 UnobtrusiveAnchorNav = $.klass({
@@ -11,11 +12,10 @@ UnobtrusiveAnchorNav = $.klass({
       this.setCurrent(this.element.find('a:first'));
     }
     
+    this.setSectionHeights();
+    
     // Hide all non-current sections
     $('.section[id!='+this.currentSection()+']').hide();
-    
-    // Makes all sections the same height to stop window size changing
-    $('.section').height($('.section').height());
   },
   
   onclick: $.delegate({
@@ -40,6 +40,20 @@ UnobtrusiveAnchorNav = $.klass({
       return false;
     }
   }),
+  
+  // Makes all sections the same height to stop window size changing
+  setSectionHeights: function() {
+    var tallest_height = 0
+    $('.section').each(function(number, section) {
+      if ($(section).height() > tallest_height){
+        tallest_height = $(section).height();
+      }
+      console.info($(section));
+      console.info($(section).height());
+      console.info(tallest_height);
+    });
+    $('.section').height(tallest_height);
+  },
   
   currentLink: function() {
     if(this.element.find('.current').size() > 0) {
