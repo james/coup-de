@@ -41,5 +41,6 @@ end
 
 task :deploy_gh do
   build_local
+  `git commit -m "build" -a`
   `git push origin +master:gh-pages`
 end
