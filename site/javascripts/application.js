@@ -1,5 +1,6 @@
-console.info();
-Nav = $.klass({
+// Makes a selection of anchor links to section work as an accordian inspired
+// slidey thing that works with bookmarkable URLs
+UnobtrusiveAnchorNav = $.klass({
   initialize: function() {
     // Set the current location is set in the URL hash
     if (location.hash) {
@@ -60,6 +61,6 @@ Nav = $.klass({
 });
 
 jQuery(function($) {
-  $('ul.menu').attach(Nav);
+  $('ul.menu').attach(UnobtrusiveAnchorNav);
   $('body').addClass('javascripted');
 });
