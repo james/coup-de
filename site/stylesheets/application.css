@@ -66,6 +66,7 @@ body {
       display: inline;
       padding: 3px; }
       body ul.flickr_photos li img {
-        height: 70px; }
+        height: 70px;
+        display: inline; }
   body #footer {
     text-align: center; }
