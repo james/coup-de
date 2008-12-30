@@ -41,8 +41,5 @@ end
 
 task :deploy_gh do
   build_local
-  `git checkout gh-pages`
-  `git rebase master`
-  `git checkout master`
-  `git push origin gh-pages`
+  `git push origin +master:gh-pages`
 end
