@@ -12,12 +12,19 @@ Nav = $.klass({
   
   onclick: $.delegate({
     'a': function(link) {
+      // Do nothing if we're already there
       if(!link.hasClass("current")) {
+        // Set the URL now while the section is hidden to stop the anchor working
+        // We return false at the end.
+        window.location = link.attr('href');
+        
         this.setCurrent(link);
         if(this.last.position().top > link.position().top) {
+          // If we're moving up the list
           this.sectionForLink(this.last).hide("slide", { direction: "right" }, 500);
           this.sectionForLink(link).show("slide", { direction: "left" }, 500);
         } else {
+          // If we're moving down the list
           this.sectionForLink(this.last).hide("slide", { direction: "left" }, 500);
           this.sectionForLink(link).show("slide", { direction: "right" }, 500);
         }
