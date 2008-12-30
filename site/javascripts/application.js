@@ -15,7 +15,7 @@ UnobtrusiveAnchorNav = $.klass({
     $('.section[id!='+this.currentSection()+']').hide();
     
     // Makes all sections the same height to stop window size changing
-    $('.section').height($('.section').height())
+    $('.section').height($('.section').height());
   },
   
   onclick: $.delegate({
@@ -45,14 +45,14 @@ UnobtrusiveAnchorNav = $.klass({
     if(this.element.find('.current').size() > 0) {
       return this.element.find('.current');
     } else {
-      return false
+      return false;
     }
   },
   currentSection: function() {
     if(this.currentLink()) {
       return this.currentLink().attr("href").slice(1,1000);
     } else {
-      return false
+      return false;
     }
   },
   setCurrent: function(link) {
@@ -61,7 +61,7 @@ UnobtrusiveAnchorNav = $.klass({
     link.addClass('current');
   },
   sectionForLink: function(link) {
-    return $(link.attr("href"))
+    return $(link.attr("href"));
   }
 });
 
