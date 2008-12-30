@@ -1,8 +1,10 @@
 console.info();
 Nav = $.klass({
   initialize: function() {
-    // Set the first item as current if not already set
-    if(!this.element.find('.current')[0]) {
+    // Set the current location is set in the URL hash
+    if (location.hash) {
+      this.setCurrent($("a[href="+location.hash+"]"))
+    } else {
       this.setCurrent(this.element.find('a:first'));
     }
     
