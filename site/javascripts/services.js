@@ -55,7 +55,7 @@ Flickr = $.klass({
         element.append(
           '<li>'+
             '<a href="'+item.link+'">'+
-              '<img src="'+item.media.m.replace(/_m.jpg$/, "_s.jpg")+'" alt="'+item.title+' />'+
+              '<img src="'+item.media.m.replace(/_m.jpg$/, "_s.jpg")+'" alt="'+item.title+'" />'+
             '</a>'+
           '</li>'
         );
