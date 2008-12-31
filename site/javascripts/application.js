@@ -1,4 +1,3 @@
-console.info();
 // Makes a selection of anchor links to section work as an accordian inspired
 // slidey thing that works with bookmarkable URLs
 UnobtrusiveAnchorNav = $.klass({
@@ -48,9 +47,6 @@ UnobtrusiveAnchorNav = $.klass({
       if ($(section).height() > tallest_height){
         tallest_height = $(section).height();
       }
-      console.info($(section));
-      console.info($(section).height());
-      console.info(tallest_height);
     });
     $('.section').height(tallest_height);
   },
