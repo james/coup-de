@@ -10,9 +10,7 @@ UnobtrusiveAnchorNav = $.klass({
     } else {
       this.setCurrent(this.element.find('a:first'));
     }
-    
-    this.setSectionHeights();
-    
+        
     // Hide all non-current sections
     $('.section[id!='+this.currentSection()+']').hide();
   },
@@ -39,17 +37,6 @@ UnobtrusiveAnchorNav = $.klass({
       return false;
     }
   }),
-  
-  // Makes all sections the same height to stop window size changing
-  setSectionHeights: function() {
-    var tallest_height = 0
-    $('.section').each(function(number, section) {
-      if ($(section).height() > tallest_height){
-        tallest_height = $(section).height();
-      }
-    });
-    $('.section').height(tallest_height);
-  },
   
   currentLink: function() {
     if(this.element.find('.current').size() > 0) {
