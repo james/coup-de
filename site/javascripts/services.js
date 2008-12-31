@@ -11,7 +11,7 @@ Twitter = $.klass({
   }
 });
 
-GitHub = $.klass({
+GitHubProjects = $.klass({
   initialize: function(user_id) {
     var element = jQuery('<ul class="github_repositories" id="github_repositories_from_'+user_id+'"></ul>');
     this.element.before(element);
@@ -25,6 +25,28 @@ GitHub = $.klass({
              '</a>'+
            '</li>'
         );
+      });
+    });
+  }
+});
+GitHubUserCommits = $.klass({
+  initialize: function(user_id) {
+    var element = jQuery('<ul class="github_repositories" id="github_repositories_from_'+user_id+'"></ul>');
+    this.element.before(element);
+    element.before('<h4>Latest code commits:</h4>');
+    $.getJSON("http://github.com/"+user_id+".json?callback=?", function(data){ 
+      $.each(data, function(i, item) { 
+        if(item.type == "PushEvent") {
+          element.append(
+            '<li>'+
+               '<a href="'+item.repository.url+'">'+
+                 item.repository.name+
+               '</a>: '+
+               item.payload.shas.length.toString()+
+               ' commits'+
+             '</li>'
+          );
+        }
       });
     });
   }
@@ -133,7 +155,8 @@ PeoplesMusicStore = $.klass({
 
 jQuery(function($) {
   $('.twitter').attach(Twitter, 'coupde');
-  $('.github').attach(GitHub, 'james');
+  $('.githubprojects').attach(GitHubProjects, 'james');
+  $('.githubcommits').attach(GitHubUserCommits, 'james');
   $('.gigs').attach(LastFmEvents, 'Abscond', 'ef5f6b42e168116f913ed26eeacb7e34');
   $('.photos').attach(Flickr, '82586441@N00');
   $('.links').attach(Delicious, 'coupde');
