@@ -55,7 +55,7 @@ GitHubUserCommits = $.klass({
 LastFmEvents = $.klass({
   initialize: function(user_id, api_key) {
     var element = jQuery('<ul class="lastfm_events" id="lastfm_events_for_'+user_id+'"></ul>');
-    $.getJSON("http://lastfm-api-ext.appspot.com/2.0/?method=user.getevents&user="+user_id+"&api_key="+api_key+"&outtype=js&callback=?", function(data){ 
+    $.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getevents&user="+user_id+"&api_key="+api_key+"&format=json&callback=?", function(data){ 
       if (data.events.size > 0) {
       this.element.replaceWith(element);
         element.before('<h4>Gigs I\'ll be going to soon:</h4>');
