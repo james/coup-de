@@ -152,6 +152,29 @@ PeoplesMusicStore = $.klass({
   }
 });
 
+SoundCloud = $.klass({
+  initialize: function(user_id) {
+    var element = jQuery('<div class="souncloud_embeds" id="souncloud_embeds_from_'+user_id+'"></div>');
+    this.element.before(element);
+    element.before("<h4>Latest tunes I've made:</h4>");
+    $.getJSON("http://api.soundcloud.com/users/abscond/tracks.js?callback=?", function(data){ 
+      $.each(data.slice(0,3), function(i, item) { 
+        element.append(
+          '<div class="souncloud_player">'+
+            '<h5>'+item.title+':</h5>'+
+            '<object height="81" width="100%">'+
+              '<param name="movie" value="http://player.soundcloud.com/player.swf?track='+item.permalink+'&amp;color=F4191F"></param>'+
+              '<param name="wmode" value="transparent"></param>'+
+              '<param name="allowscriptaccess" value="always"></param>'+
+              '<embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?track='+item.permalink+'&amp;color=F4191F" type="application/x-shockwave-flash" width="100%" wmode="transparent"></embed>' +
+            '</object>' +
+          '</div>'
+        );
+      });
+    });
+  }
+});
+
 
 jQuery(function($) {
   $('.twitter').attach(Twitter, 'coupde');
@@ -162,4 +185,5 @@ jQuery(function($) {
   $('.links').attach(Delicious, 'coupde');
   $('.tumble').attach(Tumblr, 'tumble.coupde.com');
   $('.tunes').attach(PeoplesMusicStore, 'coupde');
+  $('.my_tunes').attach(SoundCloud, 'abscond');
 });
