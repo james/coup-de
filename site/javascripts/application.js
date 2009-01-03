@@ -10,7 +10,9 @@ UnobtrusiveAnchorNav = $.klass({
     } else {
       this.setCurrent(this.element.find('a:first'));
     }
-        
+    
+    $('#coup_de_what').val(".com");
+    
     // Hide all non-current sections
     $('.section[id!='+this.currentSection()+']').hide();
   },
@@ -33,6 +35,8 @@ UnobtrusiveAnchorNav = $.klass({
           this.sectionForLink(this.last).hide("slide", { direction: "left" }, 500);
           this.sectionForLink(link).show("slide", { direction: "right" }, 500);
         }
+        
+        $('#coup_de_what').val(this.currentLink().html());
       }
       return false;
     }
