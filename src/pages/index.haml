@@ -22,18 +22,18 @@
       %a{:href => "#photos"} Photos
     %li 
       %a{:href => "#good_things"} Good things
-    %li 
-      %a{:href => "#abscond"} Abscond
     / %li 
     /   %a{:href => "#last_orders"} Last Orders
     / %li
     /   %a{:href => "#rewired_state"} Rewired State
-    / %li
-    /   %a{:href => "#cv"} CV
+    %li
+      %a{:href => "#cv"} CV
     / %li
     /   %a{:href => "#bucket_of_shite"} Bucket of Shite
     / %li
     /   %a{:href => "#relme"} rel=me
+    %li 
+      %a{:href => "#abscond"} Abscond
 
 
 .content.span-18.last
@@ -143,6 +143,9 @@
       %p These are some things I think make the world better.
       %a{:href => "http://www.openrightsgroup.org/"}
         %img{:src => "http://widgets.openrightsgroup.org/founding1000/since/956149.png", :alt => "Protecting your bits since 04/10/07. Open Rights Group founder #492"}
+  
+  #cv.section
+    = partial 'cv'
   
   #abscond.section
     %h2 Abscond
